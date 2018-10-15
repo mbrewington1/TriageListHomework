@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<script src="app.js"></script>
+<p id="text"></p>
+<script src="app.js"></script>
+
+<script>
+function myFunction() {
+    var letter = document.getElementById("myInput").value;
+    var text;
+
+    // If the selection is "add"
+    if (letter === "add") {
+        text = "What is the patient name?";
+        text = "Great! I will add the patient name to the list";
+        
+    // If the letter is "update"
+    if (letter === "update") {
+        text = "What is the patient name?";
+        text = "What is the new name?";
+
+    // If the letter is "delete"
+    if (letter === "delete") {
+        text = "What is the patient name?";
+        text = "Patient name deleted";
+
+    // If the letter is "reorder"
+    if (letter === "reorder") {
+        text = "What is the patient name?";
+        text = "What is the other petient name?";
+    
+    // If the letter is anything else
+    } else {
+        text = "Please choose from the list!!";
+    }
+    document.getElementById("demo").innerHTML = text;
+}
+</script>
+
+</body>
+</html>
+
+
