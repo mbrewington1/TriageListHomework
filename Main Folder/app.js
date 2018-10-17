@@ -4,6 +4,8 @@ let patientList = [
   'Tri',
   'Maryam'
 ]
+
+alert (patientList);
 const command = prompt('Hello! What would you like to do with the ER Triage list?  Choose one: add, update, delete, reorder');
 function choice () {
   //Adding a name to the list//
@@ -39,17 +41,16 @@ if (command == 'delete') {
 }
 
 //Reordering list//
-if (command == 'reorder') {
+if (command === 'reorder') {
   let Patient = prompt('Patient Name?');
-  for (let i = 0; i < patientList.length; i++) {
-    if (Patient == patientList[i]) {
-      let otherPatient = prompt('Other Patient Name?');
-      patientList.splice(i, 0, otherPatient);
-      alert(patientList);
-      break;
-    }
+  let otherPatient = prompt('Other Patient Name?');
+  index1 = patientList.indexOf(Patient);
+  index2 = patientList.indexOf(otherPatient);
+  patientList[index1] = otherPatient;
+  patientList[index2] = Patient;
+  alert(patientList);
   }
-}
+  
 choice ();
 
 
